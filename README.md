@@ -1,2 +1,2 @@
-# To get onto the deployed app please follow:
+# Link to try the deployed clone:
 https://facebookclonebydhawal.web.app/
