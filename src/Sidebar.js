@@ -6,13 +6,17 @@ import PeopleIcon from '@material-ui/icons/People';
 import ChatIcon from '@material-ui/icons/Chat';
 import StoreFrontIcon from '@material-ui/icons/Storefront';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+
+    const [ {user} , dispatch] = useStateValue();
+
     return (
         <div className="sidebar">
             <SidebarRow 
-                src='https://pbs.twimg.com/profile_images/1277836005983354880/9wL5Jc2l_400x400.jpg' 
-                title='Dhawal Darji'
+                src={user.photoURL}
+                title={user.displayName}
             />
 
             <SidebarRow 
@@ -32,8 +36,6 @@ function Sidebar() {
             <SidebarRow
                 Icon={StoreFrontIcon} title="Marketplace"
             />
-            
-            
         </div>
     )
 }
